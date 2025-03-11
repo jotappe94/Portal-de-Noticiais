@@ -1,32 +1,32 @@
-/* utility-first */
+/* Utility-first */
 .grid {
     display: grid;
 }
 
-.grid-col{
-grid-auto-flow: column;
+.grid-flow-col { /* Padronizado o nome da classe */
+    grid-auto-flow: column;
 }
 
-.grid-cols-2{
-    grid-template-columns: 1fr 1fr;
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr); /* Melhorado para usar repeat */
 }
 
 .gap-16 {
-    gap:16px;
+    gap: 16px; /* Adicionado espaço após o valor */
 }
 
-.text-2xl{
+.text-2xl {
     font: var(--h1);
 }
 
-.text-xl{
+.text-xl {
     font: var(--h2);
 }
 
-.text-lg{
+.text-lg {
     font: var(--h3);
 }
 
-.text-sm{
+.text-sm {
     font: var(--text-sm);
 }

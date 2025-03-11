@@ -1,25 +1,25 @@
 #primary {
     padding-block: 20px;
 
-    div{
+    div {
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
-    /* nesting css */
-    div:nth-clid(2){
+    /* Nesting CSS */
+    div:nth-child(2) { /* Corrigido o nome do seletor */
         margin-inline: auto;
-}
+    }
 
-div:nth-clid(3){
-    justify-self: end;
-}
+    div:nth-child(3) { /* Corrigido o nome do seletor */
+        justify-self: end;
+    }
 }
 
 #secondary {
     padding-block: 14px;
     border: solid 1px var(--stroke-color);
     border-inline: none;
-    justify-content: space-betwwen;
+    justify-content: space-between; /* Corrigido o nome da propriedade */
 }
