@@ -1,36 +1,101 @@
-/* Utility-first */
+/* Utility-first CSS */
+/* ================= */
+
+/* Grid Utilities */
 .grid {
     display: grid;
 }
 
-.grid-flow-col { /* Padronizado o nome da classe */
-    grid-auto-flow: column;
+/* Grid Auto Flow */
+.grid-flow-col {
+    grid-auto-flow: column; /* Define o fluxo automático das colunas */
 }
 
+/* Grid Columns */
 .grid-cols-2 {
-    grid-template-columns: repeat(2, 1fr); /* Melhorado para usar repeat */
+    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas de tamanho igual */
 }
 
+/* Gap Utilities */
 .gap-16 {
-    gap: 16px; /* Adicionado espaço após o valor */
+    gap: 16px; /* Espaçamento entre linhas e colunas */
 }
 
 .gap-32 {
     gap: 32px;
 }
 
+/* Responsive Gap Utilities (Exemplo) */
+@media (min-width: 768px) {
+    .gap-16-md {
+        gap: 16px;
+    }
+    .gap-32-md {
+        gap: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gap-16-lg {
+        gap: 16px;
+    }
+    .gap-32-lg {
+        gap: 32px;
+    }
+}
+
+/* Typography Utilities */
 .text-2xl {
-    font: var(--h1);
+    font: var(--h1); /* Título grande */
 }
 
 .text-xl {
-    font: var(--h2);
+    font: var(--h2); /* Título médio */
 }
 
 .text-lg {
-    font: var(--h3);
+    font: var(--h3); /* Título pequeno */
 }
 
 .text-sm {
-    font: var(--text-sm);
+    font: var(--text-sm); /* Texto pequeno */
+}
+
+/* Text Alignment Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Margin and Padding Utilities (Exemplo) */
+.m-16 {
+    margin: 16px;
+}
+
+.p-16 {
+    padding: 16px;
+}
+
+/* Flexbox Utilities (Exemplo) */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
 }

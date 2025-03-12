@@ -1,25 +1,42 @@
+
 #primary {
-    padding-block: 20px;
-
-    div {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    /* Nesting CSS */
-    div:nth-child(2) { /* Corrigido o nome do seletor */
-        margin-inline: auto;
-    }
-
-    div:nth-child(3) { /* Corrigido o nome do seletor */
-        justify-self: end;
-    }
+    padding-block: 20px; /* Espaçamento vertical interno */
 }
 
+#primary div {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaçamento entre os itens */
+}
+
+/* Centraliza o segundo filho */
+#primary div:nth-child(2) {
+    margin-inline: auto; /* Margem automática nas laterais */
+}
+
+/* Alinha o terceiro filho à direita */
+#primary div:nth-child(3) {
+    justify-self: end; /* Alinhamento à direita */
+}
+
+/* Secondary Navigation */
 #secondary {
-    padding-block: 14px;
-    border: solid 1px var(--stroke-color);
-    border-inline: none;
-    justify-content: space-between; /* Corrigido o nome da propriedade */
+    padding-block: 14px; /* Espaçamento vertical interno */
+    border: solid 1px var(--stroke-color); /* Borda com cor personalizada */
+    border-inline: none; /* Remove bordas laterais */
+    display: flex; /* Ativa o flexbox */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
 }
+
+/* Responsive Adjustments (Exemplo) */
+@media (max-width: 768px) {
+    #primary {
+        padding-block: 16px; /* Reduz o espaçamento em telas menores */
+    }
+
+    #secondary {
+        flex-direction: column; /* Altera a direção do flexbox para coluna */
+        gap: 8px; /* Adiciona espaçamento entre os itens */
+    }
+}
+
